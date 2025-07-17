@@ -52,7 +52,9 @@ const BookDetail = () => {
   if (!book) {
     return (
       <div className="text-center mt-20">
-        <p className="text-red-500 text-xl font-semibold mb-4">Book not found.</p>
+        <p className="text-red-500 text-xl font-semibold mb-4">
+          Book not found.
+        </p>
         <Link to="/" className="text-indigo-600 hover:underline font-semibold">
           ← Back to book list
         </Link>
@@ -62,7 +64,9 @@ const BookDetail = () => {
 
   // Safely get the cover image URL, fallback to placeholder
   const coverImage =
-    book.formats && typeof book.formats === "object" && book.formats["image/jpeg"]
+    book.formats &&
+    typeof book.formats === "object" &&
+    book.formats["image/jpeg"]
       ? book.formats["image/jpeg"]
       : "https://via.placeholder.com/300x400?text=No+Image";
 
@@ -87,26 +91,34 @@ const BookDetail = () => {
         >
           {book.title}
         </h1>
-
+        <p className="text-lg mb-3">
+          <span className="font-semibold">ID:</span> {id}
+        </p>
         <p className="text-lg mb-3">
           <span className="font-semibold">Author:</span>{" "}
-          {book.authors && Array.isArray(book.authors) && book.authors.length > 0
+          {book.authors &&
+          Array.isArray(book.authors) &&
+          book.authors.length > 0
             ? book.authors.map((a) => a.name).join(", ")
             : "Unknown"}
         </p>
 
         <p className="text-lg mb-3">
           <span className="font-semibold">Genre:</span>{" "}
-          {book.subjects && Array.isArray(book.subjects) && book.subjects.length > 0
+          {book.subjects &&
+          Array.isArray(book.subjects) &&
+          book.subjects.length > 0
             ? book.subjects.join(", ")
             : "Unknown"}
         </p>
 
-        {book.languages && Array.isArray(book.languages) && book.languages.length > 0 && (
-          <p className="text-md mb-3 italic text-gray-600">
-            Languages: {book.languages.join(", ").toUpperCase()}
-          </p>
-        )}
+        {book.languages &&
+          Array.isArray(book.languages) &&
+          book.languages.length > 0 && (
+            <p className="text-md mb-3 italic text-gray-600">
+              Languages: {book.languages.join(", ").toUpperCase()}
+            </p>
+          )}
 
         <p className="text-md mb-6">
           <span className="font-semibold">Download Count:</span>{" "}
@@ -115,12 +127,14 @@ const BookDetail = () => {
             : "N/A"}
         </p>
 
-        {book.bookshelves && Array.isArray(book.bookshelves) && book.bookshelves.length > 0 && (
-          <p className="mb-6 text-gray-700">
-            <span className="font-semibold">Bookshelves:</span>{" "}
-            {book.bookshelves.join(", ")}
-          </p>
-        )}
+        {book.bookshelves &&
+          Array.isArray(book.bookshelves) &&
+          book.bookshelves.length > 0 && (
+            <p className="mb-6 text-gray-700">
+              <span className="font-semibold">Bookshelves:</span>{" "}
+              {book.bookshelves.join(", ")}
+            </p>
+          )}
 
         <Link
           to="/"
