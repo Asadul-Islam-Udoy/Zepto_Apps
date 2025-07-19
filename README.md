@@ -16,7 +16,7 @@
   Open http://localhost:3000 to view it in the browser.
   
 ## Project Build Commend
-  npm i build
+    npm run build
 
 
 # 2 Project Name Book Management
