@@ -27,15 +27,15 @@
   3. Each book should display the title, author, cover image, author name, genre and id.
     
   4. Functionalities:
-     a.Implement a search bar that allows users to filter books by title in real-time.
-     b.Add a dropdown filter to filter books based on genre/topic.
-     c.Make a wishlist and store to localstorage, wishlisted books should have a love or liked icon. Make the icon clickable to save/remove as a wishlist. 
-     d.Make pagination to paginate the books list, For example (next page, previous page) or (1, 2, 3….8) pagination.
+     i. Implement a search bar that allows users to filter books by title in real-time.
+     ii. Add a dropdown filter to filter books based on genre/topic.
+     iii. Make a wishlist and store to localstorage, wishlisted books should have a love or liked icon. Make the icon clickable to save/remove as a wishlist. 
+     iv. Make pagination to paginate the books list, For example (next page, previous page) or (1, 2, 3….8) pagination.
      
   6. User Interface:
-     a.Make a homepage that will show the books list, a wishlist page that will show the wishlisted books list and each book page that will show the book details. 
-     b.Make a navbar.
-     c.Ensure that the application is fully responsive and works well on both desktop and mobile devices.
+     i. Make a homepage that will show the books list, a wishlist page that will show the wishlisted books list and each book page that will show the book details. 
+     ii. Make a navbar.
+     iii. Ensure that the application is fully responsive and works well on both desktop and mobile devices.
       
 ## Project install Commend
   npm install or npm i
