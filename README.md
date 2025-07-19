@@ -1,4 +1,4 @@
-# Project Name Font Management
+# 1 Project Name Font Management
 
 ### Description
   1. Create a Font Uploading Form without a Button. Make sure you are uploading only the TTF file extension
@@ -19,14 +19,13 @@
   npm build
 
 
-# Project Name Book Management
+# 2 Project Name Book Management
 
 ### Description
   1. Fetch data from the following public API:
      https://gutendex.com/books
            For API Documentations visit - https://gutendex.com/
   2 . Display the list of books in a clean and user-friendly format.
-
   3 . Each book should display the title, author, cover image, author name, genre and id.
   4 . Functionalities:
      a.Implement a search bar that allows users to filter books by title in real-time.
