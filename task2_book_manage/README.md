@@ -32,3 +32,5 @@
 
 ### Git repository link
   https://github.com/Asadul-Islam-Udoy/Zepto_Apps.git
+### Live Link
+   https://glistening-paletas-f94569.netlify.app/
