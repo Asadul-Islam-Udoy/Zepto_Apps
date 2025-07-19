@@ -1,5 +1,30 @@
-# Project Name 
- This is Book Management
+# 1 Project Name Font Management
+
+### Description
+  1. Create a Font Uploading Form without a Button. Make sure you are uploading only the TTF file extension
+  2. Now, make a Font Group with multiple fonts. On load, just one Field will be there. After clicking on Add Row then, another row will be added. If you want to create a group, you must have to select two fonts. Please ensure this validation
+  3. Show the list of All Font Group. Edit and Delete that Font Group
+
+## Project install Commend
+  npm install or npm i
+  
+## Project Run Commend
+  npm start
+  
+### npm start
+  Runs the app in the development mode.
+  Open http://localhost:3000 to view it in the browser.
+  
+## Project Build Commend
+    npm run build
+    
+#### Git repository link
+  https://github.com/Asadul-Islam-Udoy/Zepto_Apps.git
+  
+#### Live link
+   https://moonlit-moonbeam-b0c96d.netlify.app/
+
+# 2 Project Name Book Management
 
 ### Description
   1. Fetch data from the following public API:https://gutendex.com/books For API Documentations visit - https://gutendex.com/
@@ -28,9 +53,12 @@
   Open http://localhost:4000 to view it in the browser.
   
 ## Project Build Commend
-    npm run build
+  npm run build
 
-### Git repository link
+#### Git repository link
   https://github.com/Asadul-Islam-Udoy/Zepto_Apps.git
-### Live Link
+#### Live link
    https://glistening-paletas-f94569.netlify.app/
+
+
+
