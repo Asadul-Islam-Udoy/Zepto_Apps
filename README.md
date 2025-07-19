@@ -48,7 +48,7 @@
   Open http://localhost:4000 to view it in the browser.
   
 ## Project Build Commend
-  npm i build
+  npm run build
 
 ### Git repository link
   https://github.com/Asadul-Islam-Udoy/Zepto_Apps.git
