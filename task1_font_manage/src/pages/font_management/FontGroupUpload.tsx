@@ -16,7 +16,7 @@ interface FontRow {
 
 interface FontGroup {
   id: string;
-  fonts: { name: string; size: number; priceChange: number }[];
+  fonts: { grouptitle:string, name: string; size: number; priceChange: number }[];
 }
 
 const FontUploaderWithGroup = () => {
@@ -25,7 +25,7 @@ const FontUploaderWithGroup = () => {
     { id: crypto.randomUUID(), selectedFontId: "", size: 12, priceChange: 0 },
   ]);
   const [groups, setGroups] = useState<FontGroup[]>([]);
-
+  const [groupTitle,setGroupTitle] = useState<string>('')
   const addFontFace = (fontName: string, fontUrl: string): HTMLStyleElement => {
     const styleEl = document.createElement("style");
     styleEl.type = "text/css";
@@ -68,7 +68,11 @@ const FontUploaderWithGroup = () => {
     e.target.value = "";
   };
 
-  const updateRow = (id: string, field: keyof Omit<FontRow, "id">, value: any) => {
+  const updateRow = (
+    id: string,
+    field: keyof Omit<FontRow, "id">,
+    value: any
+  ) => {
     setRows((prev) =>
       prev.map((row) => (row.id === id ? { ...row, [field]: value } : row))
     );
@@ -98,6 +102,7 @@ const FontUploaderWithGroup = () => {
       .map((r) => {
         const f = fonts.find((f) => f.id === r.selectedFontId);
         return {
+          grouptitle:groupTitle,
           name: f?.name || "Unknown",
           size: r.size,
           priceChange: r.priceChange,
@@ -110,7 +115,9 @@ const FontUploaderWithGroup = () => {
     ]);
 
     // Reset rows
-    setRows([{ id: crypto.randomUUID(), selectedFontId: "", size: 12, priceChange: 0 }]);
+    setRows([
+      { id: crypto.randomUUID(), selectedFontId: "", size: 12, priceChange: 0 },
+    ]);
   };
 
   const deleteGroup = (id: string) => {
@@ -155,11 +162,15 @@ const FontUploaderWithGroup = () => {
       {/* Font Group Editor */}
       <div className="w-full max-w-4xl bg-white p-6 rounded shadow">
         <h2 className="text-xl font-semibold mb-4">Font Group Editor</h2>
+        <p>You have to select at least two fonts</p>
+       <div className="pb-2">
+          <input type="text" value={groupTitle} onChange={(e)=>setGroupTitle(e.target.value)} placeholder="Group Title" className="w-full p-1 border rounded" />
+       </div>
         <table className="w-full border-collapse border border-gray-300">
           <thead className="bg-gray-100">
             <tr>
-              <th className="border px-2 py-1">Font</th>
-              <th className="border px-2 py-1">Preview</th>
+              <th className="border px-2 py-1">Font Name</th>
+              <th className="border px-2 py-1">Select Font</th>
               <th className="border px-2 py-1">Size</th>
               <th className="border px-2 py-1">Price</th>
               <th className="border px-2 py-1">Actions</th>
@@ -170,6 +181,15 @@ const FontUploaderWithGroup = () => {
               const font = fonts.find((f) => f.id === row.selectedFontId);
               return (
                 <tr key={row.id}>
+                  <td
+                    className="border px-2 py-1"
+                    style={{
+                      fontFamily: font?.name ?? "inherit",
+                      fontSize: row.size,
+                    }}
+                  >
+                    {font?.name || "---"}
+                  </td>
                   <td className="border px-2 py-1">
                     <select
                       className="w-full border rounded"
@@ -185,15 +205,6 @@ const FontUploaderWithGroup = () => {
                         </option>
                       ))}
                     </select>
-                  </td>
-                  <td
-                    className="border px-2 py-1"
-                    style={{
-                      fontFamily: font?.name ?? "inherit",
-                      fontSize: row.size,
-                    }}
-                  >
-                    {font?.name || "---"}
                   </td>
                   <td className="border px-2 py-1">
                     <input
@@ -270,7 +281,7 @@ const FontUploaderWithGroup = () => {
             <tbody>
               {groups.map((g, i) => (
                 <tr key={g.id}>
-                  <td className="border px-2 py-1">Group {i + 1}</td>
+                  <td className="border px-2 py-1">{g.fonts[0].grouptitle}</td>
                   <td className="border px-2 py-1">
                     {g.fonts.map((f) => f.name).join(", ")}
                   </td>

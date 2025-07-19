@@ -1,7 +1,7 @@
 
 import { ReactNode, useState } from "react";
-import DashboardSidebar from "../components/dashboard/DashboardSidbar";
-import DashboardNavbar from "../components/dashboard/DashboardNavbar";
+import DashboardSidebar from "../components/font_management/Sidbar";
+import DashboardNavbar from "../components/font_management/Navbar";
 
 interface Props {
   children: ReactNode;

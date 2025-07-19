@@ -1,9 +1,9 @@
 import React from 'react';
 import {BrowserRouter,Route,Routes} from 'react-router-dom'
-import Home from './pages/dashboard/Home';
-import DashboardLayout from './layout/DashboardLayout';
-import FontUploader from './pages/dashboard/FontUploader';
-import FontUploaderWithGroup from './pages/dashboard/FontGroupUpload';
+import Home from './pages/font_management/Home';
+import FontLayout from './layout/FontLayout';
+import FontUploader from './pages/font_management/FontUploader';
+import FontUploaderWithGroup from './pages/font_management/FontGroupUpload';
 
 
 function App() {
@@ -11,13 +11,13 @@ function App() {
    <>
    <BrowserRouter>
    <main>
-      <DashboardLayout>
+      <FontLayout>
         <Routes>
-          <Route path="/dashboard" element={<Home />} />
-          <Route path='/dashboard/fontuploader' element={<FontUploader/>}/>
-          <Route path='/dashboard/fontlist' element={<FontUploaderWithGroup/>}/>
+          <Route path="/" element={<Home />} />
+          <Route path='/fontuploader' element={<FontUploader/>}/>
+          <Route path='/fontlist' element={<FontUploaderWithGroup/>}/>
         </Routes>
-      </DashboardLayout>
+      </FontLayout>
    </main>
    </BrowserRouter>
    </>

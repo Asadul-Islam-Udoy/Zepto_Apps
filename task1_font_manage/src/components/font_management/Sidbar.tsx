@@ -27,10 +27,10 @@ const DashboardSidebar = ({ open, setOpen }: Props) => {
         <Link to="/" className="block px-4 border py-2 rounded hover:bg-gray-700">
           Home
         </Link>
-        <Link to="/dashboard/fontuploader" className="block border px-4 py-2 rounded hover:bg-gray-700">
-          Upload Font
+        <Link to="/fontuploader" className="block border px-4 py-2 rounded hover:bg-gray-700">
+          Upload Single Font
         </Link>
-        <Link to="dashboard/fontlist" className="block border px-4 py-2 rounded hover:bg-gray-700">
+        <Link to="/fontlist" className="block border px-4 py-2 rounded hover:bg-gray-700">
           Upload Group Font
         </Link>
       </nav>

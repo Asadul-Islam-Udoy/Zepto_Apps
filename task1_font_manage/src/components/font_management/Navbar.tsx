@@ -11,10 +11,10 @@ function DashboardNavbar({ onMenuClick }: Props) {
         <Menu />
       </button>
 
-      <div className="font-semibold text-xl">My Dashboard</div>
+      <div className="font-semibold text-xl">Font Managemant</div>
 
       <div className="space-x-4">
-        <button className="px-3 py-1 bg-blue-600 text-white rounded">Login</button>
+        {/* <button className="px-3 py-1 bg-blue-600 text-white rounded">Login</button> */}
       </div>
     </div>
   );
