@@ -1,46 +1,34 @@
-# Getting Started with Create React App
+# Project Name 
+ This is Book Management
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Description
+  1. Fetch data from the following public API:https://gutendex.com/books For API Documentations visit - https://gutendex.com/
+  2. Display the list of books in a clean and user-friendly format.
+  3. Each book should display the title, author, cover image, author name, genre and id.
+    
+  4. Functionalities:
+     i. Implement a search bar that allows users to filter books by title in real-time.
+     ii. Add a dropdown filter to filter books based on genre/topic.
+     iii. Make a wishlist and store to localstorage, wishlisted books should have a love or liked icon. Make the icon clickable to save/remove as a wishlist. 
+     iv. Make pagination to paginate the books list, For example (next page, previous page) or (1, 2, 3….8) pagination.
+     
+  6. User Interface:
+     i. Make a homepage that will show the books list, a wishlist page that will show the wishlisted books list and each book page that will show the book details. 
+     ii. Make a navbar.
+     iii. Ensure that the application is fully responsive and works well on both desktop and mobile devices.
+      
+## Project install Commend
+  npm install or npm i
+  
+## Project Run Commend
+  npm start
+  
+### npm start
+  Runs the app in the development mode.
+  Open http://localhost:4000 to view it in the browser.
+  
+## Project Build Commend
+  npm build
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:4000](http://localhost:4000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Git repository link
+  https://github.com/Asadul-Islam-Udoy/Zepto_Apps.git
