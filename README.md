@@ -16,7 +16,7 @@
   Open http://localhost:3000 to view it in the browser.
   
 ## Project Build Commend
-  npm build
+  npm i build
 
 
 # 2 Project Name Book Management
@@ -48,7 +48,7 @@
   Open http://localhost:4000 to view it in the browser.
   
 ## Project Build Commend
-  npm build
+  npm i build
 
 ### Git repository link
   https://github.com/Asadul-Islam-Udoy/Zepto_Apps.git
